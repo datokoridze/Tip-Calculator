@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT */
+
+:root{
+    --bg-color: #C5E4E7;
+    --white: #FFFFFF;
+
+    --strong-cyan: #26C2AE;
+
+    --very-dark-cyan: #00474B;
+    --dark-grayish-cyan: #547878;
+    --grayish-cyan: #5E7A7D;
+    --very-light-grayish-cyan: #F3F9FA;
+
+    --font-family: 'Space Mono', monospace;
+}
+
+/* CSS */
+
+body{
+    background-color: var(--bg-color);
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 700;
+}
+
+.logo{
+    padding-block: 50px 40px;
+    margin: 0 auto;
+}
+
+.content-box{
+    background-color: var(--white);
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px 25px 0px 0px;
+    padding-bottom: 2rem;
+}
+
+.input-box{
+    padding: 2rem;
+}
+
+input{
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    direction: RTL;
+    outline: none;
+
+    font-family: var(--font-family);
+    background-color: var(--very-light-grayish-cyan);
+}
+
+
+
+/* Bill */
+
+.bill > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bill > div span:first-child{
+    padding-bottom: 6px;
+    color: var(--grayish-cyan)
+}
+
+.bill > div span:nth-child(2){
+    display: none;
+}
+
+.bill > div span:nth-child(2).error {
+    display: block;
+    color: #E17457;
+}
+
+.bill > input{
+    background-image: url('../images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 19px 1rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    padding-right: 17px;
+    caret-color: transparent;
+    color: var(--very-dark-cyan);
+}
+
+.bill > input:focus{
+    border: 2px solid var(--strong-cyan);
+}
+
+.bill > input.error{
+    border: 2px solid #E17052;
+}
+
+.bill > input::placeholder, .number-of-people > input::placeholder{
+    color: var(--very-dark-cyan);
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+
+
+/* Select Tip */
+
+.select-tip{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-block: 2rem;
+}
+
+.select-tip > span{
+    color: var(--grayish-cyan);
+}
+
+.select-tip > .percentage{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.percentage > .percentage-item{
+    background-color: var(--very-dark-cyan);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.percentage > .percentage-item:hover{
+    background-color: #9FE8DF;
+    color: var(--very-dark-cyan);
+}
+
+.percentage-item.active{
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.percentage-item > input{
+    height: 100%;
+    color: var(--very-dark-cyan);
+    font-size: 1.5rem;
+    padding-right: 17px;
+    caret-color: transparent;
+}
+
+.percentage-item > input:focus{
+    border: 2px solid #26C2AE;
+}
+
+.percentage > .percentage-item:nth-child(6){
+    background-color: #F3F9FA;
+}
+
+.percentage-item > input::placeholder{
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+
+
+/* Number of People */
+
+.number-of-people > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.number-of-people > div span:first-child{
+    color: var(--grayish-cyan);
+}
+
+.number-of-people > div span:nth-child(2){
+    display: none;
+}
+
+.number-of-people > div span:nth-child(2).error {
+    display: block;
+    color: #E17457;
+}
+
+.number-of-people > input{
+    background-image: url('../images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: 17px 16px;
+    font-size: 1.5rem;
+    padding-right: 17px;
+    caret-color: transparent;
+    margin-top: 6px;
+
+    color: var(--very-dark-cyan);
+}
+
+.number-of-people > input:focus{
+    border: 2px solid var(--strong-cyan);
+}
+
+.number-of-people > input.error{
+    border: 2px solid #E17052;
+}
+
+
+
+
+/* Result */
+
+.result-box{
+    margin-inline: 1.5rem;
+    padding: 2rem 1.5rem 1.5rem;
+    border-radius: 15px;
+    background-color: var(--very-dark-cyan);
+}
+
+.tip-amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip-amount > .left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1.5rem 2rem;
+}
+
+.total > .left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.left > span:first-child{
+    color: var(--white);
+}
+
+.left > span:nth-child(2){
+    color: #7F9D9F;
+    font-size: 13px;
+}
+
+.right{
+    font-size: 2rem;
+    color: var(--strong-cyan);
+}
+
+input[type=button]{
+    background-color: #0D686D;
+    color: var(--very-dark-cyan);
+    cursor: not-allowed;
+    font-size: 20px
+}
+
+input[type=button].active{
+    background-color: var(--strong-cyan);
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--very-dark-cyan);
+}
+
+
+
+/* Media */
+
+@media screen and (min-width: 900px){
+
+    body{
+        margin-bottom: 239px;
+    }
+
+    .logo{
+        padding-block: 163px 87px;
+    }
+
+    .content-box{
+        width: 920px;
+        margin: 0 auto;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+
+        padding: 0;
+        display: flex;
+    }
+
+    .input-box{
+        padding: 3rem;
+        width: 100%;
+    }
+
+    .select-tip{
+        margin-block: 2.5rem;
+    }
+
+    .select-tip > .percentage{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+    }
+
+    .percentage-item > input{
+        padding-right: 12px;
+    }
+
+
+    /* Result Box */
+
+    .result-box{
+        margin: 2rem;
+        padding: 40px;
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .result-box > .total{
+        padding-top: 1.5rem;
+    }
+
+    
+}

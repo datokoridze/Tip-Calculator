@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="./images/logo.svg" alt="Logo" />
+    </div>
+
+    <div class="content-box">
+      <div class="input-box">
+        <div class="bill">
+          <div>
+            <span>Bill</span>
+            <span class="bill-error">Can’t be zero</span>
+          </div>
+          <input type="text" placeholder="0" />
+        </div>
+
+        <div class="select-tip">
+          <span>Select Tip %</span>
+          <div class="percentage">
+            <div class="percentage-item">5%</div>
+            <div class="percentage-item">10%</div>
+            <div class="percentage-item">15%</div>
+            <div class="percentage-item">25%</div>
+            <div class="percentage-item">50%</div>
+            <div class="percentage-item">
+              <input type="text" placeholder="Custom" />
+            </div>
+          </div>
+        </div>
+
+        <div class="number-of-people">
+          <div>
+            <span>Number of People</span>
+            <span class="number-of-people-error">Can’t be zero</span>
+          </div>
+          <input type="text" placeholder="0" />
+        </div>
+      </div>
+
+      <div class="result-box">
+        <div>
+          <div class="tip-amount">
+            <div class="left">
+              <span>Tip Amount</span>
+              <span>/ person</span>
+            </div>
+
+            <div class="right">$0</div>
+          </div>
+
+          <div class="total">
+            <div class="left">
+              <span>Total</span>
+              <span>/ person</span>
+            </div>
+
+            <div class="right">$0</div>
+          </div>
+        </div>
+
+        <input type="button" value="RESET" />
+      </div>
+    </div>
+    <script src="./JS/app.js"></script>
+  </body>
+</html>
